@@ -4,36 +4,33 @@ require 'minitest/pride'
 
 class ArrayTest < Minitest::Test
   def test_empty
-    assert_equal __, [].empty?
-    assert_equal __, [1,2,3].empty?
+    assert_equal true, [].empty?
+    assert_equal false, [1,2,3].empty?
   end
 
   def test_first
-    skip
-    assert_equal __, [].first
-    assert_equal __, [:a, :b, :c].first
-    assert_equal __, ["spoon"].first
+    assert_equal nil, [].first
+    assert_equal :a, [:a, :b, :c].first
+    assert_equal 'spoon', ["spoon"].first
   end
 
   def test_last
-    skip
-    assert_equal __, [].last
-    assert_equal __, [:a, :b, :c].last
-    assert_equal __, ["spoon"].last
+    assert_equal nil, [].last
+    assert_equal :c, [:a, :b, :c].last
+    assert_equal 'spoon', ["spoon"].last
   end
 
   def test_access
-    skip
-    assert_equal __, [][0]
-    assert_equal __, ["a", "b", "c"][0]
-    assert_equal __, ["a", "b", "c"][1]
-    assert_equal __, ["a", "b", "c"][-1]
-    assert_equal __, ["a", "b", "c"][-2]
-    assert_equal __, ["a", "b", "c"][4]
+    assert_equal nil, [][0]
+    assert_equal 'a', ["a", "b", "c"][0]
+    assert_equal 'b', ["a", "b", "c"][1]
+    assert_equal 'c', ["a", "b", "c"][-1]
+    assert_equal 'b', ["a", "b", "c"][-2]
+    assert_equal nil, ["a", "b", "c"][4]
   end
 
   def test_index
-    skip
+ 
     assert_equal __, ["a", "b", "c"].index("a")
     assert_equal __, ["a", "b", "c"].index("b")
     assert_equal __, ["a", "b", "c"].index("c")

@@ -37,15 +37,15 @@ class ArrayTest < Minitest::Test
   end
 
   def test_join
-    assert_equal __, [].join
-    assert_equal __, [].join(' ')
-    assert_equal __, [].join(' - ')
-    assert_equal __, [].join(' and ')
-    assert_equal __, ["a", "b", "c"].join
-    assert_equal __, ["a", "b", "c"].join("")
-    assert_equal __, ["a", "b", "c"].join(" ")
-    assert_equal __, ["a", "b", "c"].join(" - ")
-    assert_equal __, ["a", "b", "c"].join(" and ")
+    assert_equal '', [].join
+    assert_equal '', [].join(' ')
+    assert_equal '', [].join(' - ')
+    assert_equal '', [].join(' and ')
+    assert_equal 'abc', ["a", "b", "c"].join
+    assert_equal 'abc', ["a", "b", "c"].join("")
+    assert_equal 'a b c', ["a", "b", "c"].join(" ")
+    assert_equal 'a - b - c', ["a", "b", "c"].join(" - ")
+    assert_equal 'a and b and c', ["a", "b", "c"].join(" and ")
   end
 
   def test_length

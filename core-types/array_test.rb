@@ -30,15 +30,13 @@ class ArrayTest < Minitest::Test
   end
 
   def test_index
- 
-    assert_equal __, ["a", "b", "c"].index("a")
-    assert_equal __, ["a", "b", "c"].index("b")
-    assert_equal __, ["a", "b", "c"].index("c")
-    assert_equal __, ["a", "b", "c"].index("d")
+    assert_equal 0, ["a", "b", "c"].index("a")
+    assert_equal 1, ["a", "b", "c"].index("b")
+    assert_equal 2, ["a", "b", "c"].index("c")
+    assert_equal nil, ["a", "b", "c"].index("d")
   end
 
   def test_join
-    skip
     assert_equal __, [].join
     assert_equal __, [].join(' ')
     assert_equal __, [].join(' - ')

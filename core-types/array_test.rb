@@ -49,11 +49,10 @@ class ArrayTest < Minitest::Test
   end
 
   def test_length
-    skip
-    assert_equal __, [].length
-    assert_equal __, [:a].length
-    assert_equal __, [:a, :b].length
-    assert_equal __, [:a, :b, :c].length
+    assert_equal 0, [].length
+    assert_equal 1, [:a].length
+    assert_equal 2, [:a, :b].length
+    assert_equal 3, [:a, :b, :c].length
   end
 
   def test_reverse

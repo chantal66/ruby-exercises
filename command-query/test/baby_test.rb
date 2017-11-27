@@ -1,7 +1,7 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative 'baby'
+require_relative '../lib/baby'
 
 class BabyTest < Minitest::Test
   def test_babies_are_tired

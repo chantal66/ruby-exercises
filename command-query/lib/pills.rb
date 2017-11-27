@@ -8,6 +8,6 @@ class Pills
   end
 
   def pop
-    @pills -= 1    
+    @pills -= 1
   end
 end

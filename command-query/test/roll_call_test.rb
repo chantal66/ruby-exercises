@@ -1,7 +1,8 @@
 gem 'minitest', '~> 5.2'
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative 'roll_call'
+require_relative '../lib/roll_call'
+require 'pry'
 
 class RollCallTest < Minitest::Test
   def test_no_names
@@ -10,14 +11,12 @@ class RollCallTest < Minitest::Test
   end
 
   def test_longest_of_one
-    skip
     roll_call = RollCall.new
     roll_call << "Oda"
     assert_equal "Oda", roll_call.longest_name
   end
 
   def test_longest_of_several
-    skip
     roll_call = RollCall.new
     roll_call << "Ann"
     roll_call << "Alexandra"

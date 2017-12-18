@@ -12,4 +12,8 @@ class Cupcakes
   def <<(cupcake)
     @cupcakes << cupcake
   end
+
+  def flavor
+    
+  end
 end
